@@ -6,7 +6,7 @@
   "schemes": ["https"],
   "tags": [
     { "name": "Contacts API" },
-    { "name": "Contacts" }
+    
   ],
   "paths": {
     "/": {
