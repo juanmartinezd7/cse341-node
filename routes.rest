@@ -1,0 +1,33 @@
+//routes.rest
+### Get all contacts
+GET http://localhost:8080/contacts
+
+### Get contact by Id
+GET http://localhost:8080/contacts/6903f56dbe1fe24830afc503
+
+### Create contact
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Ruben",
+  "lastName": "Smith",
+  "email": "ruben.smith@testmail.com",
+  "favoriteColor": "Yellow",
+  "birthday": "1994-02-112"
+}
+
+### PUT contact
+PUT http://localhost:8080/contacts/690e95b039f20c59dee45624
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Johnson",
+  "email": "alice.johnson@testmail.com",
+  "favoriteColor": "Blue",
+  "birthday": "1992-03-15"
+}
+
+### DELETE contact
+DELETE http://localhost:8080/contacts/690f92848b31c75eef8d3e31

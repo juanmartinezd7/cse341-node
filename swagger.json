@@ -1,0 +1,68 @@
+{
+  "swagger": "2.0",
+  "info": { "title": "Contacts Api", "version": "1.0.0" },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": ["https","http"],
+  "tags": [
+    { "name": "Contacts API" },
+    { "name": "Contacts" }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["Contacts API"],
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/contacts/": {
+      "get": {
+        "tags": ["Contacts"],
+        "responses": { "200": { "description": "OK" } }
+      },
+      "post": {
+        "tags": ["Contacts"],              
+        "parameters": [{ "name": "body", "in": "body", "schema": { 
+          "type": "object", "properties": { 
+            "firstName": {"example":"any"}, 
+            "lastName": {"example":"any"}, 
+            "email": {"example":"any"}, 
+            "favoriteColor": {"example":"any"}, 
+            "birthday": {"example":"any"} } } }],
+        "responses": { "201": { "description": "Created" } }
+      }
+    },
+    "/contacts/{id}": {
+      "get": {
+        "tags": ["Contacts"],              
+        "parameters": [{ "name": "id", "in": "path", "required": true, "type": "string" }],
+        "responses": { "200": { "description": "OK" }, "400": { "description": "Bad Request" }, 
+        "404": { "description": "Not Found" } }
+      },
+      "put": {
+        "tags": ["Contacts"],              
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "string" },
+          { "name": "body", "in": "body", "schema": { "type": "object", "properties": { 
+            "firstName": {"example":"any"}, 
+            "lastName": {"example":"any"}, 
+            "email": {"example":"any"}, 
+            "favoriteColor": {"example":"any"}, 
+            "birthday": {"example":"any"} } } }
+        ],
+        "responses": { "200": { "description": "OK" }, 
+        "204": { "description": "No Content" }, 
+        "400": { "description": "Bad Request" }, 
+        "404": { "description": "Not Found" } }
+      },
+      "delete": {
+        "tags": ["Contacts"],             
+        "parameters": [{ "name": "id", "in": "path", "required": true, "type": "string" }],
+        "responses": { 
+          "204": { "description": "No Content" }, 
+          "400": { "description": "Bad Request" }, 
+          "404": { "description": "Not Found" } }
+      }
+    }
+  }
+}
