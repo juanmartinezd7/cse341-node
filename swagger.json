@@ -1,11 +1,12 @@
 {
   "swagger": "2.0",
   "info": { "title": "Contacts Api", "version": "1.0.0" },
-  "host": "cse341-node-contacts.onrender.com/",
+  "host": "cse341-node-contacts.onrender.com",
   "basePath": "/",
   "schemes": ["https"],
   "tags": [
-    { "name": "Contacts API" }
+    { "name": "Contacts API" },
+    { "name": "Contacts" }
     
   ],
   "paths": {
@@ -15,7 +16,7 @@
         "responses": { "200": { "description": "OK" } }
       }
     },
-    "/contacts/": {
+    "/contacts": {
       "get": {
         "tags": ["Contacts"],
         "responses": { "200": { "description": "OK" } }
@@ -32,7 +33,7 @@
         "responses": { "201": { "description": "Created" } }
       }
     },
-    "/contacts/{id}": {
+    "/contacts{id}": {
       "get": {
         "tags": ["Contacts"],              
         "parameters": [{ "name": "id", "in": "path", "required": true, "type": "string" }],
