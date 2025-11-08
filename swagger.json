@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": { "title": "Contacts Api", "version": "1.0.0" },
-  "host": "localhost:8080",
+  "host": "cse341-node-contacts.onrender.com/",
   "basePath": "/",
-  "schemes": ["https","http"],
+  "schemes": ["https"],
   "tags": [
     { "name": "Contacts API" },
     { "name": "Contacts" }
