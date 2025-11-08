@@ -5,7 +5,7 @@
   "basePath": "/",
   "schemes": ["https"],
   "tags": [
-    { "name": "Contacts API" },
+    { "name": "Contacts API" }
     
   ],
   "paths": {
